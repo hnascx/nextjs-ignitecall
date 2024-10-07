@@ -1,5 +1,7 @@
+import { Heading } from '@ignite-ui/react'
+
 export default function Home() {
   return (
-    <h1>Go shawty</h1>
+    <Heading as='h1'>Go shawty</Heading >
   )
 }
