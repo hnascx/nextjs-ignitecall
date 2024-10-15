@@ -3,10 +3,10 @@ import { ArrowRight } from 'phosphor-react'
 // import { api } from '../../lib/axios'
 import { Container, Header } from '../styles'
 import { ConnectBox, ConnectItem } from './styles'
-import { signIn, useSession } from 'next-auth/react'
+import { signIn } from 'next-auth/react'
 
 export default function Register() {
-  const session = useSession()
+  // const session = useSession()
 
   // async function handleRegister() {}
 
@@ -34,7 +34,7 @@ export default function Register() {
             <ArrowRight />
           </Button>
         </ConnectItem>
-        
+
         <Button type="submit">
           Próximo passo
           <ArrowRight />
