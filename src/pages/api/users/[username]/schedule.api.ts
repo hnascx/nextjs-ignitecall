@@ -1,11 +1,11 @@
+import dayjs from 'dayjs'
+import { google } from 'googleapis'
 import { NextApiRequest, NextApiResponse } from 'next'
 import { z } from 'zod'
-import { prisma } from '../../../../lib/prisma'
-import dayjs from 'dayjs'
 import { getGoogleOAuthToken } from '../../../../lib/google'
-import { google } from 'googleapis'
+import { prisma } from '../../../../lib/prisma'
 
-export default async function handle(
+export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
 ) {
@@ -53,7 +53,7 @@ export default async function handle(
 
   if (conflictingScheduling) {
     return res.status(400).json({
-      message: 'There is another scheduling at the same time.',
+      message: 'There is another scheduling at at the same time.',
     })
   }
 
@@ -89,12 +89,12 @@ export default async function handle(
         createRequest: {
           requestId: scheduling.id,
           conferenceSolutionKey: {
-            type: 'hangoutMeet',
+            type: 'hangoutsMeet',
           },
         },
       },
     },
   })
 
-  return res.json({})
+  return res.status(201).end()
 }
