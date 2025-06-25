@@ -1,12 +1,12 @@
-import { CalendarBlank, Clock } from 'phosphor-react'
-import { ConfirmForm, FormActions, FormError, FormHeader } from './styles'
-import { Button, Text, TextArea, TextInput } from '@ignite-ui/react'
-import { z } from 'zod'
-import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
+import { Button, Text, TextArea, TextInput } from '@ignite-ui/react'
 import dayjs from 'dayjs'
 import { useRouter } from 'next/router'
-import { api } from '../../../../../lib/axios'
+import { CalendarBlank, Clock } from 'phosphor-react'
+import { useForm } from 'react-hook-form'
+import { z } from 'zod'
+import { api } from '../../../../../../axios'
+import { ConfirmForm, FormActions, FormError, FormHeader } from './styles'
 
 const confirmFormSchema = z.object({
   name: z
