@@ -1,11 +1,11 @@
 import { zodResolver } from '@hookform/resolvers/zod'
 import {
-    Avatar,
-    Button,
-    Heading,
-    MultiStep,
-    Text,
-    TextArea,
+  Avatar,
+  Button,
+  Heading,
+  MultiStep,
+  Text,
+  TextArea,
 } from '@ignite-ui/react'
 import { GetServerSideProps } from 'next'
 import { getServerSession } from 'next-auth'
@@ -15,10 +15,10 @@ import { useRouter } from 'next/router'
 import { ArrowRight } from 'phosphor-react'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
-import { api } from '../../../../axios'
 import { buildNextAuthOptions } from '../../api/auth/[...nextauth].api'
 import { Container, Header } from '../styles'
 import { FormAnnotation, ProfileBox } from './styles'
+import { api } from '../../../lib/axios'
 
 const updateProfileSchema = z.object({
   bio: z.string(),

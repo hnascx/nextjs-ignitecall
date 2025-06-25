@@ -5,8 +5,8 @@ import { useRouter } from 'next/router'
 import { CalendarBlank, Clock } from 'phosphor-react'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
-import { api } from '../../../../../../axios'
 import { ConfirmForm, FormActions, FormError, FormHeader } from './styles'
+import { api } from '../../../../../lib/axios'
 
 const confirmFormSchema = z.object({
   name: z

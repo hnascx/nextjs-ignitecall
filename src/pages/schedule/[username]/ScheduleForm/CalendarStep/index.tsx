@@ -2,7 +2,6 @@ import { useQuery } from '@tanstack/react-query'
 import dayjs from 'dayjs'
 import { useRouter } from 'next/router'
 import { useState } from 'react'
-import { api } from '../../../../../../axios'
 import { Calendar } from '../../../../../components/Calendar'
 import {
   Container,
@@ -11,6 +10,7 @@ import {
   TimePickerItem,
   TimePickerList,
 } from './styles'
+import { api } from '../../../../../lib/axios'
 
 interface Availability {
   possibleTimes: number[]
